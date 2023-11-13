@@ -19,7 +19,6 @@ class Timer
     # if min > 59, hour + 1 and min - 60 until min < 59 (while min > 59
     min = 0
     hour = 0
-  
     
     # return seconds if it's less than 1 minute
     if min == 0 && @sec <= 59
@@ -42,11 +41,8 @@ class Timer
       hour += 1
       min -= 60
     end
-    
-  
     return "#{padded(hour)}:#{padded(min)}:#{padded(@sec)}"
   end
-
 
   def padded(time)
     # if integer < 9, add 0 to front and return both
